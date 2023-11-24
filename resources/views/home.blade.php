@@ -9,6 +9,7 @@
     @vite('resources/js/app.js')
 
     <title>Heroes D&D</title>
+
 </head>
 
 <body>
@@ -19,6 +20,7 @@
 
         <table class="table">
             <thead>
+
                 <tr>
                     <th scope="col">NOME</th>
                     <th scope="col">CA</th>
