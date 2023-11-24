@@ -13,9 +13,9 @@
 
 <body>
 
-    <div class="container my-5">
+    <div class="container my-4">
 
-        <h1 class="mb-4 text-center text-success fw-bold mt-5">Dungeons & Dragons Characters</h1>
+        <h1 class="mb-4 text-center text-success fw-bold mt-4">Dungeons & Dragons Characters</h1>
 
         <table class="table">
             <thead>
