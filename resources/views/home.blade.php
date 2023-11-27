@@ -9,16 +9,18 @@
     @vite('resources/js/app.js')
 
     <title>Heroes D&D</title>
+
 </head>
 
 <body>
 
     <div class="container my-4">
 
-        <h1 class="mb-4 text-center">Dungeons & Dragons Characters</h1>
+        <h1 class="mb-4 text-center text-success fw-bold mt-4">Dungeons & Dragons Characters</h1>
 
         <table class="table">
             <thead>
+
                 <tr>
                     <th scope="col">NOME</th>
                     <th scope="col">CA</th>
