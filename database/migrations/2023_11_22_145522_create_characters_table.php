@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('characters', function (Blueprint $table) {
+        Schema::create('heroes', function (Blueprint $table) {
             $table->id();
             $table->string('name', 50);
             $table->string('slug', 52)->unique();
-            $table->decimal('height', 5,2)->nullable();
-            $table->decimal('weight', 6,2)->nullable();
+            $table->decimal('height', 5, 2)->nullable();
+            $table->decimal('weight', 6, 2)->nullable();
             $table->longText('background')->nullable();
             $table->string('image', 100)->nullable();
             $table->tinyInteger('armor_class')->unsigned();
@@ -39,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('characters');
+        Schema::dropIfExists('heroes');
     }
 };

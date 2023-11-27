@@ -4,24 +4,23 @@ Iniziamo a creare un'applicazione per organizzare e generare i nostri PG di un g
 
 Avremo una tabella `Character` che raccoglierà tutte le caratteristiche dei nostri Personaggi.
 
-
 Scrivete Migration e Seeder relativi per iniziare a popolare la vostra collezione di personaggi giocabili ;)  
 Alla fine create una view che mostra una lista dei vostri personaggi generati
 
 ## Character
-- Nome
-- Altezza 
-- Peso
-- Background
-- Immagine 
-- Classe_Armatura
-- FOR
-- DES
-- COS
-- INT
-- SAG
-- CAR
 
+-   Nome
+-   Altezza
+-   Peso
+-   Background
+-   Immagine
+-   Classe_Armatura
+-   FOR
+-   DES
+-   COS
+-   INT
+-   SAG
+-   CAR
 
 ### Note sui campi
 
