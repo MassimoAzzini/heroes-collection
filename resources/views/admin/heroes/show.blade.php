@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.admin')
 
 @section('content')
     <h1>{{ $hero->name }}</h1>
@@ -11,12 +11,19 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Altezza: {{ $hero->height }} | Peso: {{ $hero->weight }}</li>
             <li class="list-group-item">CA: {{ $hero->armor_class }}</li>
-            <li class="list-group-item">FOR: {{ $hero->strength }} | DES: {{ $hero->dexterity }} | COS:
-                {{ $hero->constitution }} | INT: {{ $hero->intelligence }} | SAG: {{ $hero->wisdom }} | CAR:
-                {{ $hero->charism }}</li>
+            <li class="list-group-item">
+                FOR: {{ $hero->strength }} |
+                DES: {{ $hero->dexterity }} |
+                COS: {{ $hero->constitution }} |
+                INT: {{ $hero->intelligence }} |
+                SAG: {{ $hero->wisdom }} |
+                CAR: {{ $hero->charism }}
+            </li>
         </ul>
         <div class="card-body">
-            <a href="{{ route('heroes.edit', $hero) }}" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+            <a href="{{ route('admin.heroes.edit', $hero) }}" class="btn btn-warning">
+                <i class="fa-solid fa-pencil"></i>
+            </a>
             @include('partials.delete')
         </div>
     </div>

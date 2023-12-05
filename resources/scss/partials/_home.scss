@@ -3,6 +3,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    overflow: auto;
     color: white;
+}
+
+header {
+    height: 80px;
+}
+
+main {
+    height: calc(100vh - 80px);
 }

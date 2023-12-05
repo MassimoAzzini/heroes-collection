@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Models\Hero;
+use Illuminate\Http\Request;
 
 class HeroController extends Controller
 {
@@ -15,7 +16,7 @@ class HeroController extends Controller
     public function index()
     {
         $heroes = Hero::paginate(10);
-        return view('heroes.index', compact('heroes'));
+        return view('admin.heroes.index', compact('heroes'));
     }
 
     /**
@@ -25,7 +26,7 @@ class HeroController extends Controller
      */
     public function create()
     {
-        return view('heroes.create');
+        return view('admin.heroes.create');
     }
 
     /**
@@ -43,7 +44,7 @@ class HeroController extends Controller
         $new_hero->fill($form_data);
         $new_hero->save();
 
-        return redirect()->route('heroes.show', $new_hero);
+        return redirect()->route('admin.heroes.show', $new_hero);
     }
 
     /**
@@ -54,7 +55,7 @@ class HeroController extends Controller
      */
     public function show(Hero $hero)
     {
-        return view('heroes.show', compact('hero'));
+        return view('admin.heroes.show', compact('hero'));
     }
 
     /**
@@ -65,7 +66,7 @@ class HeroController extends Controller
      */
     public function edit(Hero $hero)
     {
-        return view('heroes.edit', compact('hero'));
+        return view('admin.heroes.edit', compact('hero'));
     }
 
     /**
@@ -85,7 +86,7 @@ class HeroController extends Controller
         }
 
         $hero->update($form_data);
-        return redirect()->route('heroes.show', $hero);
+        return redirect()->route('admin.heroes.show', $hero);
     }
 
     /**
@@ -98,6 +99,6 @@ class HeroController extends Controller
     {
         $hero->delete();
 
-        return redirect()->route('heroes.index');
+        return redirect()->route('admin.heroes.index');
     }
 }
