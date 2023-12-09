@@ -16,12 +16,12 @@
 </head>
 
 <body>
-    <div class="container my-4">
-
-        @include('partials.header')
-
-        @yield('content')
-    </div>
+    @include('admin.partials.header')
+    <main class=" py-4 overflow-auto ">
+        <div class="container ">
+            @yield('content')
+        </div>
+    </main>
 </body>
 
 </html>

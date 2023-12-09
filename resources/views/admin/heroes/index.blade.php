@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.admin')
 
 @section('content')
     <h1 class="mb-4 text-center text-success fw-bold mt-4">Dungeons & Dragons Characters</h1>
@@ -30,10 +30,13 @@
                     <td>{{ $hero->intelligence }}</td>
                     <td>{{ $hero->wisdom }}</td>
                     <td>{{ $hero->charism }}</td>
-                    <td><a href="{{ route('heroes.show', $hero) }}" class="btn btn-success"><i
-                                class="fa-regular fa-eye"></i></a>
-                        <a href="{{ route('heroes.edit', $hero) }}" class="btn btn-warning"><i
-                                class="fa-solid fa-pencil"></i></a>
+                    <td>
+                        <a href="{{ route('admin.heroes.show', $hero) }}" class="btn btn-success">
+                            <i class="fa-regular fa-eye"></i>
+                        </a>
+                        <a href="{{ route('admin.heroes.edit', $hero) }}" class="btn btn-warning">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
                         @include('partials.delete')
                     </td>
                 </tr>

@@ -1,9 +1,9 @@
-@extends('layouts.main')
+@extends('layouts.admin')
 
 @section('content')
     <h3 class="text-center mb-5">Modifica hero</h3>
     <div class="container-fr">
-        <form action="{{ route('heroes.update', $hero) }}" method="POST">
+        <form action="{{ route('admin.heroes.update', $hero) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="mb-3">
