@@ -1,6 +1,5 @@
-# Heroes Colection
-
-Iniziamo a creare un'applicazione per organizzare e generare i nostri PG di un gioco D&D-like.
+Heroes Collection
+=======
 
 Avremo una tabella `Character` che raccoglierà tutte le caratteristiche dei nostri Personaggi.
 
@@ -33,4 +32,3 @@ Alla fine create una view che mostra una lista dei vostri personaggi generati
 **FOR DES COS INT SAG CAR** sono tutti valori numerici che sono inclusi in un range tra 3 e 18
 
 
-modifica
