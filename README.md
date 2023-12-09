@@ -31,3 +31,6 @@ Alla fine create una view che mostra una lista dei vostri personaggi generati
 **Classe Armatura** Un valore numerico che può andare da 10 a 20
 
 **FOR DES COS INT SAG CAR** sono tutti valori numerici che sono inclusi in un range tra 3 e 18
+
+
+modifica
