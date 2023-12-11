@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Hero;
+use App\Models\Race;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -22,6 +23,7 @@ class HeroesTableSeeder extends Seeder
         for ($i = 0; $i < 100; $i++) {
             $hero = new Hero();
             $hero->name = $faker->words(3, true);
+            $hero->race_id = Race::inRandomOrder()->first()->id;
             $hero->slug = $this->generateSlug($hero->name);
             $hero->height = $faker->randomFloat(2, 0, 999);
             $hero->weight = $faker->randomFloat(2, 0, 9999);
@@ -34,6 +36,7 @@ class HeroesTableSeeder extends Seeder
             $hero->intelligence = $faker->numberBetween(3, 18);
             $hero->wisdom = $faker->numberBetween(3, 18);
             $hero->charism = $faker->numberBetween(3, 18);
+            // dump($hero);
             $hero->save();
         }
     }

@@ -6,25 +6,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-class Hero extends Model
+
+class Skill extends Model
 {
     use HasFactory;
 
+
     protected $fillable = [
         'name',
-        'race_id',
         'slug',
-        'height',
-        'weight',
-        'background',
-        'image',
-        'armor_class',
-        'strength',
-        'dexterity',
-        'constitution',
-        'intelligence',
-        'wisdom',
-        'charism'
+        'description',
+        'peculiar_skill'
     ];
 
     public static function generateSlug($string)
@@ -42,13 +34,9 @@ class Hero extends Model
         return $slug;
     }
 
-    public function race()
-    {
-        return $this->belongsTo(Race::class);
-    }
 
-    public function skills()
+    public function heroes()
     {
-        return $this->belongsToMany(Skill::class);
+        return $this->belongsToMany(Hero::class);
     }
 }
