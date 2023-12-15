@@ -13,6 +13,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link fs-5" href="{{ route('admin.races.index') }}">
+                        Races List
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link fs-5" href="{{ route('admin.heroes.create') }}">
                         New Hero
                     </a>

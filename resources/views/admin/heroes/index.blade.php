@@ -8,6 +8,7 @@
 
             <tr>
                 <th scope="col">NOME</th>
+                <th scope="col">RAZZA</th>
                 <th scope="col">CA</th>
                 <th scope="col">FOR</th>
                 <th scope="col">DES</th>
@@ -23,8 +24,15 @@
             @foreach ($heroes as $hero)
                 <tr>
                     <th scope="row" class=" text-capitalize ">{{ $hero->name }}</th>
+                    <td>{{ $hero->race?->name ?? '-' }}</td>
                     <td>{{ $hero->armor_class }}</td>
-                    <td>{{ $hero->strength }}</td>
+                    <td>{{ $hero->strength }}
+                        @if ($hero->race)
+                            <span>(@if ($hero->race?->mod_for > 0)
+                                    +
+                                @endif{{ $hero->race?->mod_for }})</span>
+                        @endif
+                    </td>
                     <td>{{ $hero->dexterity }}</td>
                     <td>{{ $hero->constitution }}</td>
                     <td>{{ $hero->intelligence }}</td>
