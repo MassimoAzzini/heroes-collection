@@ -6,6 +6,9 @@
         <img src="{{ $hero->image }}" class="card-img-top" alt="{{ $hero->name }}">
         <div class="card-body">
             <h5 class="card-title">{{ $hero->name }}</h5>
+            <p class="card-title">Razza:
+                <strong>{{ $hero->race->name }}</strong>
+            </p>
             <p class="card-text">{{ $hero->background }}</p>
         </div>
         <ul class="list-group list-group-flush">

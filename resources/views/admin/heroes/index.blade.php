@@ -33,11 +33,41 @@
                                 @endif{{ $hero->race?->mod_for }})</span>
                         @endif
                     </td>
-                    <td>{{ $hero->dexterity }}</td>
-                    <td>{{ $hero->constitution }}</td>
-                    <td>{{ $hero->intelligence }}</td>
-                    <td>{{ $hero->wisdom }}</td>
-                    <td>{{ $hero->charism }}</td>
+                    <td>{{ $hero->dexterity }}
+                        @if ($hero->race)
+                            <span>(@if ($hero->race?->mod_des > 0)
+                                    +
+                                @endif{{ $hero->race?->mod_des }})</span>
+                        @endif
+                    </td>
+                    <td>{{ $hero->constitution }}
+                        @if ($hero->race)
+                            <span>(@if ($hero->race?->mod_cos > 0)
+                                    +
+                                @endif{{ $hero->race?->mod_cos }})</span>
+                        @endif
+                    </td>
+                    <td>{{ $hero->intelligence }}
+                        @if ($hero->race)
+                            <span>(@if ($hero->race?->mod_int > 0)
+                                    +
+                                @endif{{ $hero->race?->mod_int }})</span>
+                        @endif
+                    </td>
+                    <td>{{ $hero->wisdom }}
+                        @if ($hero->race)
+                            <span>(@if ($hero->race?->mod_sag > 0)
+                                    +
+                                @endif{{ $hero->race?->mod_sag }})</span>
+                        @endif
+                    </td>
+                    <td>{{ $hero->charism }}
+                        @if ($hero->race)
+                            <span>(@if ($hero->race?->mod_car > 0)
+                                    +
+                                @endif{{ $hero->race?->mod_car }})</span>
+                        @endif
+                    </td>
                     <td>
                         <a href="{{ route('admin.heroes.show', $hero) }}" class="btn btn-success">
                             <i class="fa-regular fa-eye"></i>

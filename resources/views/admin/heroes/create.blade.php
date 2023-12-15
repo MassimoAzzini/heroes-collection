@@ -15,6 +15,12 @@
                         <label for="background">Descrizione del prodotto</label>
                         <textarea class="form-control" id="background" name="background" style="height: 200px"></textarea>
                     </div>
+                    <select class="form-select" aria-label="Default select example" name="race_id">
+                        <option value="#">Scegli la razza ...</option>
+                        @foreach ($races as $race)
+                            <option value="{{ $race->id }}">{{ $race->name }}</option>
+                        @endforeach
+                    </select>
                     <div class="mb-3">
                         <label for="image" class="form-label">Immagine</label>
                         <input type="text" class="form-control" id="image" name="image" aria-describedby="title">
